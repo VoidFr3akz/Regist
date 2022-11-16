@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eucranium Registration Form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<form id="registerForm" action="https://script.google.com/macros/s/AKfycbyr8_4z7PIsbdzBnbDJ93fZxp8hQGfefMlOB9ej2eQDjijiMA6yOAQe3_eMD2Ggc9-i/exec" method="post">
+
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="zoom">
+      <img src="logo.png" width="200" height="200" alt="Euc_Logo" class="logo" style="padding-bottom: 15px;">
+      </div>
+      <div class="zoom1">
+      <h2>Registration Form</h2>
+      </div>
+      <div class="form">
+        <div class="input_field">
+          <input type="text" placeholder="Full Name" class="input" name="name" required>
+        </div>
+        <div class="input_field">
+          <input type="text" placeholder="email" class="input" name="email" required>
+        </div>
+        <div class="input_field">
+          <input type="text" placeholder="Phone Number" class="input" name="phone" required>
+        </div>
+
+        <div class="selection">
+    
+          <div class="class">
+            <label for="class" id="class">Class</label>
+            <select name="class" id="class" >
+              <option value="7" required>7</option>
+              <option value="8" required>8</option>
+              <option value="9" required>9</option>
+              <option value="10" required>10</option>
+            </select>
+          </div>
+       
+          <div class="sec">
+            <label for="section" id="section-title">Section</label>
+            <select name="section" id="section">
+              <option value="A" required>A</option>
+              <option value="B" required>B</option>
+              <option value="C" required>C</option>
+              <option value="D" required>D</option>
+              <option value="E" required>E</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="event">
+          
+            <div class="left-sel">
+              
+              <label class="check-box">Astrea
+                <input type="checkbox" value="Astrea" name="Astrea">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="check-box">Eloquencia
+                <input type="checkbox"  value="Eloquencia" name="Eloquencia">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="check-box">Psy-cience
+                <input type="checkbox"  value="Psy-cience" name="Psy-cience">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="check-box">Render
+                <input type="checkbox"  value="Render" name="Render">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="check-box">Parallax
+                <input type="checkbox"  value="Parallax" name="Parallax">
+                <span class="checkmark"></span>
+              </label>
+
+
+              <label class="check-box">Cryptex
+                <input type="checkbox"  value="Cryptex" name="Cryptex">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          <div class="right-sel">
+
+            <label class="check-box">Exigency
+              <input type="checkbox" value="Exigency" name="Exigency">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="check-box">Xhemia
+              <input type="checkbox" value="Xhemia" name="Xhemia">
+              <span class="checkmark"></span>
+            </label>
+
+
+            <label class="check-box">Matrix
+              <input type="checkbox" value="Matrix" name="Matrix">
+              <span class="checkmark"></span>
+            </label>
+
+
+            <label class="check-box">Viesco
+              <input type="checkbox" value="Viesco" name="Viesco">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="check-box">Model Making
+              <input type="checkbox" value="Model Making" name="Model Making">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="check-box">Illustrades
+              <input type="checkbox" value="Illustrades" name="Illustrades">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="check-box">Scienstein
+              <input type="checkbox" value="Scienstein" name="Scienstein">
+              <span class="checkmark"></span>
+            </label>
+
+        </div>
+        </div>
+
+
+
+        
+        <div class="btn">
+          <button href="registered.html" type="submit" class="registerbtn" id="submit" ><span>Register</span></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+    
+
+<script> 
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyr8_4z7PIsbdzBnbDJ93fZxp8hQGfefMlOB9ej2eQDjijiMA6yOAQe3_eMD2Ggc9-i/exec'
+  const form = document.forms['registerForm']
+  form.addEventListener('submit', e => { e.preventDefault()
+  window.open('registered.html',"_self")	
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => console.log('Success!', response))
+  .catch(error => console.error('Error!', error.message)) })
+
+
+  </script>
+
+</body>
+</html>
