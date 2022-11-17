@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Eucranium Registration Form</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<form id="registerForm" action="https://script.google.com/macros/s/AKfycbyr8_4z7PIsbdzBnbDJ93fZxp8hQGfefMlOB9ej2eQDjijiMA6yOAQe3_eMD2Ggc9-i/exec" method="post">
-
-
+<form id="registerForm" action="https://script.google.com/macros/s/AKfycb yr8_4z7PIsbdzBnbDJ93fZxp8hQGfefMlOB9ej2eQDjijiMA6yOAQe3_eMD2Ggc9-i/exec" method="post">
   <div class="container">
     <div class="wrapper">
       <div class="zoom">
@@ -20,19 +19,19 @@
       </div>
       <div class="form">
         <div class="input_field">
-          <input type="text" placeholder="Full Name" class="input" name="name" required>
+          <input type="text" placeholder="Full Name" class="input" id="inputtext"name="name" required>
         </div>
         <div class="input_field">
-          <input type="text" placeholder="email" class="input" name="email" required>
+          <input type="email" placeholder="email" class="input" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
         </div>
         <div class="input_field">
-          <input type="text" placeholder="Phone Number" class="input" name="phone" required>
+          <input type="tel" minlength="10" placeholder="Phone Number" class="input" name="phone" maxlength="12" pattern="[7-9]{1}[0-9]{9}" required>
         </div>
 
         <div class="selection">
     
-          <div class="class">
-            <label for="class" id="class">Class</label>
+          <div class="class" id="class">
+            <label for="class" >Class</label>
             <select name="class" id="class" >
               <option value="7" required>7</option>
               <option value="8" required>8</option>
@@ -53,22 +52,23 @@
           </div>
         </div>
 
+
         <div class="event">
           
             <div class="left-sel">
               
               <label class="check-box">Astrea
-                <input type="checkbox" value="Astrea" name="Astrea">
+                <input class="checkmark" type="checkbox" value="Astrea" name="Astrea" >
                 <span class="checkmark"></span>
               </label>
               
               <label class="check-box">Eloquencia
-                <input type="checkbox"  value="Eloquencia" name="Eloquencia">
+                <input class="checkmark" type="checkbox"  value="Eloquencia" name="Eloquencia">
                 <span class="checkmark"></span>
               </label>
               
               <label class="check-box">Psy-cience
-                <input type="checkbox"  value="Psy-cience" name="Psy-cience">
+                <input  type="checkbox"  value="Psy-cience" name="Psy-cience">
                 <span class="checkmark"></span>
               </label>
               
@@ -152,6 +152,8 @@
   .then(response => console.log('Success!', response))
   .catch(error => console.error('Error!', error.message)) })
 
+
+ 
 
   </script>
 
